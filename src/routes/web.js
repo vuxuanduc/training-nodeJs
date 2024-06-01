@@ -1,9 +1,8 @@
 const express = require("express");
+const { homePage } = require("../controllers/HomeController");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+router.get("/", homePage);
 
 router.get("/san-pham", (req, res) => {
   res.render("product");
