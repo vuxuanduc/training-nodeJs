@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa người dùng</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <nav class="navbar navbar-expand-lg bg-danger">
+                    <div class="container-fluid">
+                        <a class="navbar-brand text-white" href="/">Logo</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-white" aria-current="page" href="/">Trang chủ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="/them-nguoi-dung">Thêm người dùng</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="px-5 mt-3">
+                <form action="/sua-nguoi-dung" method="POST">
+                    <input type="hidden" name="id" value="<%= user.id %>" id="id">
+                    <div class="form-group">
+                        <label for="">Email: </label>
+                        <input type="text" value="<%= user.email %>" id="email" name="email" class="form-control mt-2">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="">Name: </label>
+                        <input type="text" value="<%= user.name %>" id="name" name="name" class="form-control mt-2">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="">City: </label>
+                        <input type="text" value="<%= user.city %>" id="city" name="city" class="form-control mt-2">
+                    </div>
+                    <div class="form-group mt-3">
+                        <button class="btn btn-primary">Cập nhật</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
